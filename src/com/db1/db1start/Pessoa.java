@@ -1,7 +1,15 @@
 package com.db1.db1start;
 
-public class Pessoa {
+public abstract class Pessoa {
 
-    protected String nome;
-    protected String email;
+    public String email;
+    public String nome;
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "email='" + email + '\'' +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
 }
