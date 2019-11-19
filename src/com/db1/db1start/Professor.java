@@ -2,14 +2,15 @@ package com.db1.db1start;
 
 public class Professor extends Pessoa {
 
-    public Double salario;
+    private Double salario;
 
-    @Override
-    public String toString() {
-        return "Professor{" +
-                "salario=" + salario +
-                ", email='" + email + '\'' +
-                ", nome='" + nome + '\'' +
-                '}';
+    public Double getSalario() {
+        return salario;
     }
+
+    public Professor(String email, String nome) {
+        super(email, nome);
+    }
+
+
 }
