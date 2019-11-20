@@ -13,12 +13,37 @@ public class Materia {
         testadorDeNulo(nome, "Nome");
         testadorDeNulo(descricao, "Descricao");
         testadorDeNulo(cargaHoraria, "Carga horaria");
-        testadorDeNulo(professor, "Professor");
         testadorDeNulo(quantidaDedeAulas, "Quantidade de aulas");
+        testadorDeNulo(professor, "Professor");
         this.nome = nome;
         this.descricao = descricao;
         this.cargaHoraria = cargaHoraria;
         this.professor = professor;
+        this.quantidaDedeAulas = quantidaDedeAulas;
+    }
+
+    public void trocaProfessor(Professor professor){
+        this.professor = professor;
+    }
+
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setCargaHoraria(Double cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public void setQuantidaDedeAulas(Integer quantidaDedeAulas) {
         this.quantidaDedeAulas = quantidaDedeAulas;
     }
 

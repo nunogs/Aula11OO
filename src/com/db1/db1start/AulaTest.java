@@ -44,6 +44,7 @@ public class AulaTest {
             Assert.assertEquals("Materia não pode ser nulo", naoPodeSerNulo.getMessage());
         }
     }
+
     @Test
     public void deveCriarExecaoComAlunoNulo(){
         try{
@@ -51,6 +52,10 @@ public class AulaTest {
         }catch (CampoNaoPodeSerNulo naoPodeSerNulo){
             Assert.assertEquals("Alunos não pode ser nulo", naoPodeSerNulo.getMessage());
         }
+    }
+    @Test
+    public void deveTestarPrecencaDoAluno(){
+
     }
 
 }

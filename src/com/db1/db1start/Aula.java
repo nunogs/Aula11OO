@@ -1,20 +1,28 @@
 package com.db1.db1start;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Aula {
     private Date data;
     private Materia materia;
-    private List<Aluno> alunos;
+    private List<Aluno> alunos = new ArrayList<Aluno>();
 
     public Aula(Date data, Materia materia, List<Aluno> alunos) {
         verificadorDeNulo(data, "Data");
         verificadorDeNulo(materia, "Materia");
-        verificadorDeNulo(alunos, "Alunos");
+
         this.data = data;
         this.materia = materia;
-        this.alunos = alunos;
+        //this.alunos = alunos;
+    }
+
+    public void darPresenca(Aluno aluno){
+        verificadorDeNulo(alunos, "Alunos");
+        this.alunos.add(aluno);
     }
 
     public Date getData() {
