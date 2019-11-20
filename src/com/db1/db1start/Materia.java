@@ -8,6 +8,30 @@ public class Materia {
     private Professor professor;
     private Integer quantidaDedeAulas;
 
+    public Materia(String nome, String descricao, Double cargaHoraria, Professor professor, Integer quantidaDedeAulas) {
+
+        testadorDeNulo(nome, "Nome");
+        testadorDeNulo(descricao, "Descricao");
+        testadorDeNulo(cargaHoraria, "Carga horaria");
+        testadorDeNulo(professor, "Professor");
+        testadorDeNulo(quantidaDedeAulas, "Quantidade de aulas");
+        this.nome = nome;
+        this.descricao = descricao;
+        this.cargaHoraria = cargaHoraria;
+        this.professor = professor;
+        this.quantidaDedeAulas = quantidaDedeAulas;
+    }
+
+    public Materia() {
+
+    }
+
+    private void testadorDeNulo(Object variavel, String campo) {
+        if (variavel == null) {
+            throw new CampoNaoPodeSerNulo( campo +" não pode ser nulo");
+        }
+    }
+
     public String getNome() {
         return nome;
     }
@@ -26,14 +50,6 @@ public class Materia {
 
     public Integer getQuantidaDedeAulas() {
         return quantidaDedeAulas;
-    }
-
-    public Materia(String nome, String descricao, Double cargaHoraria, Professor professor, Integer quantidaDedeAulas) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.cargaHoraria = cargaHoraria;
-        this.professor = professor;
-        this.quantidaDedeAulas = quantidaDedeAulas;
     }
 
     @Override

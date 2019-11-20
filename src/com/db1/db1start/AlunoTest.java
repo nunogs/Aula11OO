@@ -15,4 +15,20 @@ public class AlunoTest {
         Assert.assertEquals(nome, aluno.getNome());
     }
 
+    @Test
+    public void deveCriarExecaoComEmailNulo(){
+        try{
+            new Aluno( null , "Jhow");
+        }catch (CampoNaoPodeSerNulo naoPodeSerNulo){
+            Assert.assertEquals("Email não pode ser nulo", naoPodeSerNulo.getMessage());
+        }
+    }
+    @Test
+    public void deveCriarExecaoComNomeNulo(){
+        try{
+            new Aluno( "jhow@gmail.com", null);
+        }catch (CampoNaoPodeSerNulo naoPodeSerNulo){
+            Assert.assertEquals("Nome não pode ser nulo", naoPodeSerNulo.getMessage());
+        }
+    }
 }

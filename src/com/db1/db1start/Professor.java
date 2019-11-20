@@ -2,15 +2,17 @@ package com.db1.db1start;
 
 public class Professor extends Pessoa {
 
-    private Double salario;
-
-    public Double getSalario() {
-        return salario;
-    }
+    protected Double salario;
 
     public Professor(String email, String nome) {
         super(email, nome);
     }
 
+    public Professor() {
 
+    }
+
+    public Double getSalario() {
+        return salario;
+    }
 }

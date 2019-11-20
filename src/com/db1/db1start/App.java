@@ -14,7 +14,6 @@ public class App {
 
         Professor professor = new Professor("igor.silva@bd1.com.br", "Igor Silva");
 
-
         Materia materia = new Materia("POO", "Abstração, Encapsulamento, Polimorfismo, Herança" ,
                 10.5, professor ,
                 3);

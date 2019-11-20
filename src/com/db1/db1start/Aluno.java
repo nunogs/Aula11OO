@@ -2,7 +2,7 @@ package com.db1.db1start;
 
 public class Aluno extends Pessoa {
 
-    private Double nota;
+    protected Double nota;
 
 
     public Aluno(String email, String nome) {
